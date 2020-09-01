@@ -17,14 +17,18 @@
     <div class="item">Lorem, ipsum.</div>
     <div class="item">10</div>
     <div class="item">Snickers</div>
-    <div class="item">Wes Is Cool</div>
+    <div class="item">Jess Is Cool</div>
     <div class="item">Short</div>
   </div>
   <style>
-    .flex-container {}
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-    .flex-container>* {
+    .flex-container > * {
       margin: 10px;
+      flex: 1;
     }
   </style>
 </body>
