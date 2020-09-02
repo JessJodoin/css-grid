@@ -25,8 +25,8 @@
         <p class="price">$3.99</p>
         <p>Kombucha</p>
       </div>
-
     </div>
+
     <nav class="menu">
       <button aria-expanded="false" aria-controls="menu-list">
         <span class="open">☰</span>
@@ -102,8 +102,19 @@
   </div>
 
   <script>
+
+    const navButton = document.querySelector('button[aria-expanded]');
+
+    function toggleNav({ target }) {
+      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+
+      navButton.setAttribute('aria-expanded', !expanded);
+    }
+
+    navButton.addEventListener('click', toggleNav);
+
   </script>
-  
+
 </body>
 
 </html>
